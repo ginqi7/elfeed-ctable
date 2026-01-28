@@ -1,0 +1,2 @@
+https://github.com/ginqi7/emacs-ctable
+https://github.com/skeeto/elfeed

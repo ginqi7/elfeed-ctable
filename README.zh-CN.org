@@ -1,0 +1,47 @@
+#+title: elfeed-ctable
+#+author: Qiqi Jin
+#+language: zh
+
+* 概述
+使用 ctable 作为 elfeed search 的前端。
+1. ctable 能够提供像素级对齐；
+2. ctable 为每个单元格提供不同的操作；
+
+* 前提
+
+** 需要的 Emacs 包
+- [[https://github.com/ginqi7/emacs-ctable][emacs-ctable]] ：使用我 fork 的 emacs-ctable 的版本，它可以像素级对齐（即便包含非英文字符）
+- [[https://github.com/skeeto/elfeed][elfeed]] ：Emacs web feeds 客户端
+
+** 安装
++ 克隆项目到你自己的 Emacs 配置目录下：
+#+BEGIN_SRC sh
+  git clone https://github.com/ginqi7/emacs-ctable ~/.emacs.d/lisp/emacs-ctable;
+  git clone https://github.com/skeeto/elfeed ~/.emacs.d/lisp/elfeed;
+  git clone https://github.com/ginqi7/elfeed-ctable ~/.emacs.d/lisp/elfeed-ctable;
+#+END_SRC
+
++ 把克隆的路径添加到 =load-path= 当中
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/lisp/emacs-ctable")
+  (add-to-list 'load-path "~/.emacs.d/lisp/elfeed")
+  (add-to-list 'load-path "~/.emacs.d/lisp/elfeed-ctable")
+#+END_SRC
+
+* 配置
+
+#+BEGIN_SRC emacs-lisp
+  (require 'elfeed-ctable)
+#+end_src
+
+** 变量
+
+| 变量 | 默认值 | 解释 |
+|------+--------+------|
+|      |        |      |
+
+* 特性
+
+* 例子
+
+* Footnotes

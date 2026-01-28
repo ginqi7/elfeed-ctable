@@ -1,0 +1,47 @@
+#+title: elfeed-ctable
+#+author: Qiqi Jin
+#+language: en
+
+#+HTML: <a href ="https://github.com/ginqi7/elfeed-ctable/blob/master/README.zh-CN.org"><img src="https://img.shields.io/badge/README-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-555555.svg"/></a>
+
+* Overview
+Using ctable as the search frontend for elfeed.
+1. ctable provides pixel-perfect alignment.
+2. ctable provides various actions for different cell.
+
+* Prerequisites
+
+- [[https://github.com/ginqi7/emacs-ctable][emacs-ctable]]: Use my fork of emacs-ctable, which supports pixel-perfect alignment (including non-English characters).
+- [[https://github.com/skeeto/elfeed][elfeed]]: An Emacs web feeds client
+
+** Install
++ clone the project in your own emacs configuration files directory, like:
+  #+BEGIN_SRC sh
+    git clone https://github.com/ginqi7/emacs-ctable ~/.emacs.d/lisp/emacs-ctable;
+    git clone https://github.com/skeeto/elfeed ~/.emacs.d/lisp/elfeed;
+    git clone https://github.com/ginqi7/elfeed-ctable ~/.emacs.d/lisp/elfeed-ctable;
+  #+END_SRC
+
++ add the path to 'load-path'
+  #+BEGIN_SRC emacs-lisp
+    (add-to-list 'load-path "~/.emacs.d/lisp/emacs-ctable")
+    (add-to-list 'load-path "~/.emacs.d/lisp/elfeed")
+    (add-to-list 'load-path "~/.emacs.d/lisp/elfeed-ctable")
+  #+END_SRC
+
+* Configuration
+Here are a few variables that can be used for configuration:
+#+BEGIN_SRC emacs-lisp
+  (require 'elfeed-ctable)
+#+end_src
+
+** Variables
+| variable | default value | explain |
+|----------+---------------+---------|
+|          |               |         |
+
+* Features
+
+* Example
+
+* Footnotes
