@@ -54,8 +54,13 @@
 
 (defun elfeed-ctable-click (cp)
   "Handles a click event on the ctable by retrieving the selected row and displaying the corresponding elfeed entry."
-  (let* ((row (ctbl:cp-get-selected-data-row cp)))
-    (elfeed-search-show-entry (car (last row)))))
+  (let* ((row (ctbl:cp-get-selected-data-row cp))
+         (entry (car (last row))))
+    (when (elfeed-entry-p entry)
+      (elfeed-untag entry 'unread)
+      (elfeed-search-update t)
+      (unless elfeed-search-remain-on-entry (forward-line))
+      (elfeed-show-entry entry))))
 
 (defun elfeed-ctable-insert-entries (entries)
   "Inserts entries into the ctable by formatting entry data according to the column model, creating a table component with click handling for entry interaction."
